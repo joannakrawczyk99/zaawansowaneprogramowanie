@@ -6,7 +6,7 @@ from models.Movies import Movies
 
 
 def get_movies_data():
-    data = read_file(r'csv\movies.csv')
+    data = read_file('csv/movies.csv')
     movies = []
     for movie in data.split('\n'):
         if len(movie) and 'movieId' not in movie:
@@ -21,7 +21,7 @@ def get_movies():
 
 
 def get_tags_data():
-    data = read_file(r'csv\tags.csv')
+    data = read_file('csv/tags.csv')
     tags = []
     for tag in data.split('\n'):
         if len(tag) and 'userId' not in tag:
@@ -34,7 +34,7 @@ def get_tags():
 
 
 def get_ratings_data():
-    data = read_file(r'csv\ratings.csv')
+    data = read_file('csv/ratings.csv')
     ratings = []
     for rating in data.split('\n'):
         if len(rating) and 'userId' not in rating:
@@ -47,7 +47,7 @@ def get_ratings():
 
 
 def get_links_data():
-    data = read_file(r'csv\ratings.csv')
+    data = read_file('csv/ratings.csv')
     links = []
     for link in data.split('\n'):
         if len(link) and 'userId' not in link:

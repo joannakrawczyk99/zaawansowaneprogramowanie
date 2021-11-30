@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b39c37b7-71b9-4542-82ca-faed93f7df2f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ratings.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/services/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
