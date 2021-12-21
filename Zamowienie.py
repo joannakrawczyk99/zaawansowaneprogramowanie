@@ -2,11 +2,11 @@ class Zamowienie:
     def __init__(self,
                  numer_zamowienia: str,
                  id: str,
-                 kwota_za_m2: float,
-                 cena: float):
+                 m2: list,
+                 cena: list):
         self._numer_zamowienia = numer_zamowienia
         self._id = id
-        self._kwota_za_m2 = kwota_za_m2
+        self._m2 = m2
         self._cena = cena
 
     @property
@@ -26,23 +26,35 @@ class Zamowienie:
         self._id = value
 
     @property
-    def kwota_za_m2(self) -> None:
-        return self._kwota_za_m2
+    def m2(self) -> None:
+        return self._m2
 
-    @kwota_za_m2.setter
-    def kwota_za_m2(self, value: float):
-        self._kwota_za_m2 = value
+    @m2.setter
+    def m2(self, value: list):
+        self._m2 = value
 
     @property
     def cena(self) -> None:
         return self._cena
 
     @cena.setter
-    def cena(self, value: float):
+    def cena(self, value: list):
         self._cena = value
 
     def __str__(self):
         return f'Numer zamówienia: {self.numer_zamowienia}, ' \
                f'Id zamówienia: {self.id}, ' \
-               f'Kwota za m2: {self.kwota_za_m2}, ' \
-               f'Cena zamówienia: {self.cena}.'
+               f'M2: {self.m2}, ' \
+               f'Ceny: {self.cena}.'
+
+    def sumuj_cena(self):
+        suma = 0
+        for i in range(len(cena)):
+            suma = suma + i
+        return round(suma, 2)
+
+    def sumuj_m2(self):
+        suma = 0
+        for i in range(len(m2)):
+            suma = suma + i
+        return suma
