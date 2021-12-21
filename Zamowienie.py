@@ -47,14 +47,14 @@ class Zamowienie:
                f'M2: {self.m2}, ' \
                f'Ceny: {self.cena}.'
 
-    def sumuj_cena(self):
+    def sumuj_cena(self) -> float:
         suma = 0
-        for i in range(len(cena)):
-            suma = suma + i
+        for i in range(len(self.cena)):
+            suma = suma + self.cena[i]
         return round(suma, 2)
 
-    def sumuj_m2(self):
+    def sumuj_m2(self) -> float:
         suma = 0
-        for i in range(len(m2)):
-            suma = suma + i
+        for i in range(len(self.m2)):
+            suma = suma + self.m2[i]
         return suma
