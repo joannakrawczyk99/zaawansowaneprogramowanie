@@ -11,5 +11,4 @@ def argsParser():
                            "--output",
                            type=str,
                            help="path to optional output video file")
-    args = vars(arg_parse.parse_args())
-    return args
+    return vars(arg_parse.parse_args())
