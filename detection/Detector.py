@@ -29,7 +29,7 @@ def detect(frame):
 def detect_image(image):
     image = imutils.resize(image, width=min(800, image.shape[1]))
     result_image = detect(image)
-    cv2.imshow('output',result_image)
+    cv2.imshow('output', result_image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
