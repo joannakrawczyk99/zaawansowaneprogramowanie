@@ -13,15 +13,15 @@ def detect(frame):
 
     person = 1
     for x, y, w, h in cords:
-        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 0), 3)
         person += 1
 
     cv2.putText(frame,
-                f'Total Persons : {person - 1}',
-                (40, 40),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (255, 250, 100), 2)
+                f'Detected : {person - 1}',
+                (150, 25),
+                cv2.FONT_HERSHEY_PLAIN,
+                1.3,
+                (255, 0, 0), 2)
     cv2.imshow('output', frame)
     return frame
 
@@ -36,5 +36,5 @@ def detect_image(image):
 
 def detect_person(image_path):
     if image_path is not None:
-        print('[INFO] Opening Image from path.')
+        print('IMAGE OPENING')
         detect_image(image_path)
