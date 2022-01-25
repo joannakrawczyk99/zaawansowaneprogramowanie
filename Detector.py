@@ -26,18 +26,15 @@ def detect(frame):
     return frame
 
 
-def detect_person(args):
-    image_path = args["image"]
-    if image_path is not None:
-        print('[INFO] Opening Image from path.')
-        detect_image(image_path, args['output'])
-
-
-def detect_image(path, output_path):
-    image = cv2.imread(path)
+def detect_image(image):
     image = imutils.resize(image, width=min(800, image.shape[1]))
     result_image = detect(image)
-    if output_path is not None:
-        cv2.imwrite(output_path, result_image)
+    cv2.imshow('output',result_image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+
+
+def detect_person(image_path):
+    if image_path is not None:
+        print('[INFO] Opening Image from path.')
+        detect_image(image_path)
