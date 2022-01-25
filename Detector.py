@@ -1,12 +1,12 @@
 import cv2
 import imutils
 
-HOGCV = cv2.HOGDescriptor()
-HOGCV.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+model = cv2.HOGDescriptor()
+model.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
 
 def detect(frame):
-    cords, weights = HOGCV.detectMultiScale(frame,
+    cords, weights = model.detectMultiScale(frame,
                                             winStride=(4, 4),
                                             padding=(8, 8),
                                             scale=1.03)
@@ -19,9 +19,9 @@ def detect(frame):
     cv2.putText(frame,
                 f'Total Persons : {person - 1}',
                 (40, 40),
-                cv2.FONT_HERSHEY_DUPLEX,
+                cv2.FONT_HERSHEY_SIMPLEX,
                 0.8,
-                (255, 0, 0), 2)
+                (255, 250, 100), 2)
     cv2.imshow('output', frame)
     return frame
 
