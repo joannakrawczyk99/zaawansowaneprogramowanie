@@ -18,7 +18,7 @@ def detect(frame):
 
     cv2.putText(frame,
                 f'Detected : {person - 1}',
-                (150, 25),
+                (100, 20),
                 cv2.FONT_HERSHEY_PLAIN,
                 1.3,
                 (255, 0, 0), 2)
